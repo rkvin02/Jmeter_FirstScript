@@ -32,10 +32,11 @@ jobs:
         with:
           # jmeter tst plan to execute
           test-plan-path: './HTTP(S) Test Script Recorder.jmx'
+          result-file: './results/Test_Output.jtl'
 
       - name: Upload Results
         uses: actions/upload-artifact@v4
         with:
           name: jmeter-results
-          path: result.jtl
+          path: results/Test_Output.jtl
           if-no-files-found: error
