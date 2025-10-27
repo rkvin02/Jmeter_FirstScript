@@ -5,24 +5,22 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
-        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.num_threads">5</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">5</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Launch Blazedemo"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Launch Blazedemo" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/-23">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/-23" enabled="false">
             <stringProp name="HTTPSampler.domain">push.services.mozilla.com</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -102,7 +100,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/submit/firefox-desktop/events/1/13b530cb-31ce-4e37-90d0-bd4eccc3e4dd-24">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/submit/firefox-desktop/events/1/13b530cb-31ce-4e37-90d0-bd4eccc3e4dd-24" enabled="true">
             <stringProp name="HTTPSampler.domain">incoming.telemetry.mozilla.org</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -199,7 +197,7 @@ DwE�&#x1b;J{7�+&#x5;ޫ+�&#x10;ٿ��l]G�Վ�:�P�)&lt;���&#x
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/submit/firefox-desktop/metrics/1/a496f56f-00b4-4327-bf53-b1c7a7940d9b-25">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Choose flights/submit/firefox-desktop/metrics/1/a496f56f-00b4-4327-bf53-b1c7a7940d9b-25" enabled="true">
             <stringProp name="HTTPSampler.domain">incoming.telemetry.mozilla.org</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -4020,7 +4018,7 @@ e���&#x8;C&#x4;�[�q&#xb;�&#x7f;۔�y�?{�`ZZqk亹8����&#
             <hashTree/>
           </hashTree>
         </hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Enter details book flight"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Enter details book flight" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Book flight/submit/firefox-desktop/newtab/1/139f6479-c5ea-414b-ae98-7a3a287b380d-72" enabled="true">
             <stringProp name="HTTPSampler.domain">incoming.telemetry.mozilla.org</stringProp>
